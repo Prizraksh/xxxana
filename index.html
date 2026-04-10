@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моему солнышку</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="float-heart fh-1">❤</span>
+      <span class="float-heart fh-2">❤</span>
+      <span class="float-heart fh-3">❤</span>
+      <span class="spark sp-1"></span>
+      <span class="spark sp-2"></span>
+    </div>
+
+    <main class="app-shell">
+      <section id="start-screen" class="screen active" aria-labelledby="start-title">
+        <div class="card hero-card">
+          <p class="kicker">для самой любимой</p>
+          <h1 id="start-title">сегодня тебя ждёт маленькое приключение</h1>
+          <p class="lead">
+            помоги Джарольду собрать все сердечки.
+          </p>
+          <ul class="feature-list">
+            <li>спокойненький кренделечок на кондициях без шуешь</li>
+            <li>моя кисость жми на стрелочки чтобы прыгать</li>
+            <li>включи какой-нибудь трек для максимального погружения</li>
+          </ul>
+          <button id="start-btn" class="btn btn-primary" type="button">начать приключение</button>
+          <p class="tiny-note"> мои кста -> 💗</p>
+        </div>
+      </section>
+
+      <section id="game-screen" class="screen" aria-labelledby="game-title">
+        <div class="card game-card">
+          <div class="game-head">
+            <h2 id="game-title">попрыгушки Джарольда</h2>
+            <p class="instruction">
+              Matadora, matadora
+              Teu jogo sujo não me controla
+              Matadora, matadora
+              Tu é veneno que me devora
+            </p>
+          </div>
+
+          <div class="hud">
+            <div class="hud-item">
+              <span class="hud-label">уровень</span>
+              <strong id="level-count">1/2</strong>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">сердечки</span>
+              <strong id="progress-count">0/0</strong>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">шаги</span>
+              <strong id="move-count">0</strong>
+            </div>
+            <div class="hud-item wide">
+              <span class="hud-label">цель</span>
+              <strong id="goal-text">собери все сердечки</strong>
+            </div>
+          </div>
+
+          <p id="status-text" class="status-text" role="status" aria-live="polite">
+            тыкай на кнопки кис.
+          </p>
+
+          <div class="play-area">
+            <div class="board-frame">
+              <div id="game-grid" class="game-grid" role="grid" aria-label="Игровое поле"></div>
+            </div>
+
+            <div class="controls-panel">
+              <p class="controls-title">:Ж</p>
+              <div class="dpad" aria-label="Кнопки движения">
+                <button class="dir-btn" type="button" data-dir="up" aria-label="Вверх">↑</button>
+                <button class="dir-btn" type="button" data-dir="left" aria-label="Влево">←</button>
+                <button class="dir-btn" type="button" data-dir="down" aria-label="Вниз">↓</button>
+                <button class="dir-btn" type="button" data-dir="right" aria-label="Вправо">→</button>
+              </div>
+
+              <div class="control-actions">
+                <button id="restart-btn" class="btn btn-soft" type="button">Начать заново</button>
+                <button id="back-btn" class="btn btn-ghost" type="button">К старту</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-screen" class="screen" aria-labelledby="final-title">
+        <div class="card final-card">
+          <p class="kicker">ты умничка!!!!!</p>
+          <h2 id="final-title">горжусь тобой!!!!!!! 💖</h2>
+          <p class="lead">
+            ты заслужила расслабиться ^^
+          </p>
+          <p id="final-stats" class="final-stats"></p>
+
+          <div class="final-actions">
+            <a
+              id="download-btn"
+              class="btn btn-primary"
+              href="certificate.png"
+              download="certificate.png"
+              >ой что это</a
+            >
+            <button id="play-again-btn" class="btn btn-soft" type="button">
+              ну го ещё раз
+            </button>
+          </div>
+
+          <p class="signature">
+            оч лю тебя солнц
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
